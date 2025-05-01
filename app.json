@@ -1,43 +1,40 @@
+
 {
-    "name": "𝐓𝐞𝐱𝐭 𝐋𝐞𝐞𝐜𝐡",
-    "description": "𝑻𝒆𝒙𝒕 𝑳𝒆𝒆𝒄𝒉 𝑽𝒊𝒅𝒆𝒐 𝑬𝒙𝒕𝒓𝒂𝒄𝒕𝒐𝒓 𝑭𝒐𝒓 𝑻𝒆𝒍𝒆𝒈𝒓𝒂𝒎",
+    "name": " 𝙎𝘼𝙄𝙉𝙄 𝘽𝙊𝙏𝙎",
+    "description": "Download videos from various websites using this Telegram bot.",
     "logo": "https://tinypic.host/images/2025/02/07/DeWatermark.ai_1738952933236-1.png",
     "keywords": [
-        "text-video",
+        "drm-video-dl",
         "video-extract",
         "pyrogram"
     ],
-    "repository": "https://github.com/nikhilsaini098/Saini-txt-direct",
-    "success_url": "https://github.com/nikhilsaini098/Saini-txt-direct",
-    "stack": "heroku-24",
+    "repository": "https://github.com/nikhilsainiop/Masteruploader",
+    "success_url": "https://github.com/nikhilsainiop/Masteruploader",
+    "stack": "container",
     "env": {
         "API_ID": {
-            "description": "𝑬𝒏𝒕𝒆𝒓 𝒀𝒐𝒖𝒓 𝑨𝒑𝒊 𝑰𝑫",
+            "description": "Enter your Telegram API ID.",
             "required": true
         },
         "API_HASH": {
-            "description": "𝑬𝒏𝒕𝒆𝒓 𝒀𝒐𝒖𝒓 𝑨𝒑𝒊 𝑯𝒂𝒔𝒉",
+            "description": "Enter your Telegram API Hash.",
             "required": true
         },
         "BOT_TOKEN": {
-            "description": "𝑬𝒏𝒕𝒆𝒓 𝒀𝒐𝒖𝒓 𝑩𝒐𝒕 𝑻𝒐𝒌𝒆𝒏",
+            "description": "Enter your Telegram Bot Token.",
             "required": true
         },
-        "OWNER_ID": {
-            "description": "𝑼𝒔𝒆𝒓 𝑰𝑫 𝑶𝒇 𝑩𝒐𝒕 𝑶𝒘𝒏𝒆𝒓",
+        "AUTH_USERS": {
+            "description": "Enter your authorized user IDs, e.g., 6801378994,5919400080,...(Seprate by Comma) ",
             "required": true
         }
     },
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "standard-2x"
+        }
+    },
     "addons": [],
-    "buildpacks": [
-        {
-            "url": "heroku/python"
-        },
-        {
-            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
-        },
-        {
-            "url": "https://github.com/heroku/heroku-buildpack-activestorage-preview"
-        },
-    ]
+    "buildpacks": []
 }
